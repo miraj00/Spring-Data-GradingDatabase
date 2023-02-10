@@ -50,10 +50,6 @@ table, th, td {
 		<br> <br>
 		<a href="/grades/add" class="btn btn-secondary">Add a Grade</a>
 
-
-
-
-
 </div>
 
 </body>
