@@ -8,7 +8,9 @@ import com.grandcircus.gradingdatabase.model.Grade;
 
 public interface GradeRepository extends JpaRepository<Grade, Long> {
 
-	// List<Grade> grades ();
+	// List<Grade> gradesToDelete (int id);
+	 
+	// List<Grade> gradesToAdd ();
 	
 	
 }
