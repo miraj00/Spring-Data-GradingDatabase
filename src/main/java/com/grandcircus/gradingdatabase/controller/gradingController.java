@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -57,11 +58,10 @@ public class gradingController {
 	}
 	
 	@RequestMapping("/grades/{id}")
-	public String remove(@RequestParam Long id) {
-	
-		
+	public String remove(@PathVariable Long id) {
+			
 		repo.deleteById(id);
-		return "home";
+		return "redirect:/";
 	}
 	
 	
