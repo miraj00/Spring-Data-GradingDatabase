@@ -35,7 +35,7 @@ public class Grade {
 		
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	public void setId(long id) {

@@ -39,15 +39,12 @@ public class gradingController {
 	}
 	
 	@PostMapping("/grades/add")
-//	@PostMapping("/confirm")
 	public String submitAdd(Grade grade,
 			@RequestParam String name, 
 			@RequestParam String type,
 			@RequestParam double score,
 			@RequestParam double total,
 			Model model) {	
-		
-	
 		
 		repo.save(grade); 	 // "save" is used for both update and create
 		
