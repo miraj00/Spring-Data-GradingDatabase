@@ -1,6 +1,9 @@
 package com.grandcircus.gradingdatabase.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +14,8 @@ import com.grandcircus.gradingdatabase.model.Grade;
 import com.grandcircus.gradingdatabase.repository.GradeRepository;
 
 
+
+
 @Controller
 public class gradingController {
 
@@ -19,7 +24,12 @@ public class gradingController {
 	private GradeRepository repo;
 	
 	@RequestMapping("/")
-	public String home() {
+	public String home(Model model) {
+		
+		List<Grade> grade;
+		grade = repo.findAll(Sort.by("name"));
+		
+		model.addAttribute("grade", grade);
 		return "home";
 	}
 		
@@ -29,6 +39,7 @@ public class gradingController {
 	}
 	
 	@PostMapping("/grades/add")
+//	@PostMapping("/confirm")
 	public String submitAdd(Grade grade,
 			@RequestParam String name, 
 			@RequestParam String type,
@@ -36,8 +47,9 @@ public class gradingController {
 			@RequestParam double total,
 			Model model) {	
 		
+	
 		
-	//	repo.save(grade); 	 // "save" is used for both update and create
+		repo.save(grade); 	 // "save" is used for both update and create
 		
 		model.addAttribute("name", name);
 		model.addAttribute("type", type );

@@ -15,7 +15,7 @@
 <body>
 
 <div class="center">
-	<h1> Leave a Review </h1>
+	<h1> Add a Grade </h1>
 	
 	<form action="/grades/add" method="POST">
 	    

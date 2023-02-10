@@ -36,14 +36,14 @@ table, th, td {
 			</thead>
 			
 			<tbody>
-				<c:forEach var="grade" items="${grades}">
+				<c:forEach var="grade1" items="${grade}">
 				<tr>
-					<td><a href="/rooms/detail?id=${grade.id}">${grade.name}</a></td>
-					<td>${grade.type}</td>
-					<td>${grade.score}</td>
-					<td>${grade.total}</td>
-					<td><a href="/grades?id=${grade.id}">Delete</a></td>	
-				</tr>
+					<td>${grade1.name}</td>
+					<td>${grade1.type}</td>
+					<td>${grade1.score}</td>
+					<td>${grade1.total}</td>
+	<!--  				<td><a href="/grades?id=${grade1.id}">Delete</a></td>	
+	-->			</tr>
 				</c:forEach>
 			</tbody>
 		</table>

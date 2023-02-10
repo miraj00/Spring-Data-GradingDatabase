@@ -19,6 +19,18 @@ public class Grade {
 	private Double total;
 
 	
+	
+	public Grade(Long id, String name, String type, Double score, Double total) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.type = type;
+		this.score = score;
+		this.total = total;
+	}
+	
+	
+	
 	public Grade() {
 		
 	}
@@ -54,15 +66,7 @@ public class Grade {
 		this.total = total;
 	}
 	
-	public Grade(long id, String name, String type, Double score, Double total) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.type = type;
-		this.score = score;
-		this.total = total;
-	}
-	
+
 	@Override
 	public String toString() {
 		return "Grade [id=" + id + ", name=" + name + ", type=" + type + ", score=" + score + ", total=" + total + "]";

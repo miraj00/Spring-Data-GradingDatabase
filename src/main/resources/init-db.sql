@@ -13,7 +13,7 @@ CREATE TABLE `grade` (
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-INSERT INTO `grade` (name, type, score, total) VALUES 
+INSERT INTO `grade` (name, `type`, score, total) VALUES 
 ('African Countries Worksheet', 'Assignment', 10.0, 10.0),
 ('Central Asian Languages Quiz', 'Quiz', 2.0, 10.0),
 ('Mid-Term Exam', 'Exam', 43.0, 50.0),
