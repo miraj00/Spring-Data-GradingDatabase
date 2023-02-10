@@ -56,10 +56,12 @@ public class gradingController {
 		return "confirm";
 	}
 	
-	@RequestMapping("/home/delete")
+	@RequestMapping("/grades/{id}")
 	public String remove(@RequestParam Long id) {
+	
+		
 		repo.deleteById(id);
-		return "redirect:/home";
+		return "home";
 	}
 	
 	

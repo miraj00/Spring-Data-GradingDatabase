@@ -42,8 +42,8 @@ table, th, td {
 					<td>${grade1.type}</td>
 					<td>${grade1.score}</td>
 					<td>${grade1.total}</td>
-	<!--  				<td><a href="/grades?id=${grade1.id}">Delete</a></td>	
-	-->			</tr>
+	  				<td><a href="/grades/${grade1.id}">Delete</a></td>	
+			</tr>
 				</c:forEach>
 			</tbody>
 		</table>
